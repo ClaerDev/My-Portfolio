@@ -121,7 +121,7 @@ export default function BookMeeting() {
       setBookings(loadBookings())
 
       // save to admin dashboard
-      saveMessage({
+      await saveMessage({
         type:        "booking",
         fullName:    data.fullName,
         email:       data.email,

@@ -13,6 +13,7 @@
     "@react-three/drei": "^9.88.0",
     "@react-three/fiber": "^8.15.0",
     "@types/nodemailer": "6.4.14",
+    "@upstash/redis": "1.38.2",
     "daisyui": "^5.7.18",
     "framer-motion": "^10.16.4",
     "next": "13.5.6",

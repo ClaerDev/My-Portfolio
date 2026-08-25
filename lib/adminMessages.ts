@@ -1,39 +1,56 @@
 import { AdminMessage } from "../types"
 
-const STORAGE_KEY = "portfolio_admin_messages"
+const BASE = "/api/admin/messages"
 
-export function loadMessages(): AdminMessage[] {
-  if (typeof window === "undefined") return []
+export async function loadMessages(): Promise<AdminMessage[]> {
   try {
-    return JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "[]")
+    const res = await fetch(BASE)
+    const data = await res.json()
+    return data.data ?? []
   } catch {
     return []
   }
 }
 
-export function saveMessage(msg: Omit<AdminMessage, "id" | "createdAt" | "status">): AdminMessage {
-  const messages = loadMessages()
-  const newMsg: AdminMessage = {
-    ...msg,
-    id: `msg_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
-    createdAt: new Date().toISOString(),
-    status: "new",
-  }
-  messages.unshift(newMsg)
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(messages))
-  return newMsg
-}
-
-export function updateMessageStatus(id: string, status: AdminMessage["status"]): void {
-  const messages = loadMessages()
-  const idx = messages.findIndex((m) => m.id === id)
-  if (idx !== -1) {
-    messages[idx].status = status
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(messages))
+export async function saveMessage(
+  msg: Omit<AdminMessage, "id" | "createdAt" | "status">
+): Promise<AdminMessage | null> {
+  try {
+    const res = await fetch(BASE, {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify(msg),
+    })
+    const data = await res.json()
+    return data.data?.[0] ?? null
+  } catch {
+    return null
   }
 }
 
-export function deleteMessage(id: string): void {
-  const messages = loadMessages().filter((m) => m.id !== id)
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(messages))
+export async function updateMessageStatus(
+  id: string,
+  status: AdminMessage["status"]
+): Promise<void> {
+  try {
+    await fetch(BASE, {
+      method:  "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({ id, status }),
+    })
+  } catch {
+    // silent — dashboard will still refresh
+  }
+}
+
+export async function deleteMessage(id: string): Promise<void> {
+  try {
+    await fetch(BASE, {
+      method:  "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({ id }),
+    })
+  } catch {
+    // silent
+  }
 }

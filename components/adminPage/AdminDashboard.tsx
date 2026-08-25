@@ -283,7 +283,10 @@ export default function AdminDashboard() {
   }, [])
 
   // load + refresh messages
-  const refresh = useCallback(() => setMessages(loadMessages()), [])
+  const refresh = useCallback(async () => {
+    const msgs = await loadMessages()
+    setMessages(msgs)
+  }, [])
   useEffect(() => { if (isAdmin) refresh() }, [isAdmin, refresh])
 
   function handleLogout() {
@@ -291,9 +294,9 @@ export default function AdminDashboard() {
     adminAuthVar.set(false)
   }
 
-  function handleAccept(id: string)  { updateMessageStatus(id, "accepted"); refresh() }
-  function handleRead(id: string)    { updateMessageStatus(id, "read");     refresh() }
-  function handleDelete(id: string)  { deleteMessage(id); refresh(); if (expandedId === id) setExpandedId(null) }
+  async function handleAccept(id: string)  { await updateMessageStatus(id, "accepted"); refresh() }
+  async function handleRead(id: string)    { await updateMessageStatus(id, "read");     refresh() }
+  async function handleDelete(id: string)  { await deleteMessage(id); refresh(); if (expandedId === id) setExpandedId(null) }
 
   if (!isAdmin) return <LoginScreen />
 

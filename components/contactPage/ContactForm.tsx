@@ -44,7 +44,7 @@ export default function ContactForm() {
       )
       console.log("EmailJS success:", result)
       // save to admin dashboard
-      saveMessage({ type: "contact", fullName: data.fullName, email: data.email, message: data.message })
+      await saveMessage({ type: "contact", fullName: data.fullName, email: data.email, message: data.message })
       toast.success(
         `Thanks for reaching out, ${data.fullName}! I'll get back to you soon.`,
         { duration: 5000 }
