@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react"
 import {
-  FaCalendarAlt, FaEnvelope, FaTrash, FaCheck,
+  FaCalendarAlt, FaEnvelope, FaTrash, FaCopy, FaCheck,
   FaLock, FaSignOutAlt, FaInbox, FaChevronDown,
 } from "react-icons/fa"
 import { MdOutlineMarkEmailRead } from "react-icons/md"
@@ -206,6 +206,15 @@ function MessageCard({ msg, expanded, index, onToggle, onAccept, onRead, onDelet
   const isBooking  = msg.type === "booking"
   const isNew      = msg.status === "new"
   const isAccepted = msg.status === "accepted"
+  const [copied, setCopied] = useState(false)
+
+  function handleCopyEmail(e: React.MouseEvent) {
+    e.stopPropagation()
+    navigator.clipboard.writeText(msg.email).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
 
   return (
     <motion.div
@@ -257,7 +266,24 @@ function MessageCard({ msg, expanded, index, onToggle, onAccept, onRead, onDelet
               {isBooking ? "📅 Booking" : "✉️ Message"}
             </span>
           </div>
-          <p className="text-gray-400 text-[1.3rem] truncate mt-0.5">{msg.email}</p>
+          <div className="flex items-center gap-2 mt-0.5">
+            <p className="text-gray-400 text-[1.3rem] truncate">{msg.email}</p>
+            <motion.button
+              onClick={handleCopyEmail}
+              whileHover={{ scale: 1.15 }} whileTap={{ scale: 0.9 }}
+              title="Copy email"
+              className={`flex-shrink-0 p-1.5 rounded-lg transition-all duration-200 ${
+                copied
+                  ? "text-emerald-500 bg-emerald-50"
+                  : "text-gray-300 hover:text-main-orange hover:bg-main-orange/10"
+              }`}
+            >
+              {copied
+                ? <FaCheck className="text-[1.2rem]" />
+                : <FaCopy  className="text-[1.2rem]" />
+              }
+            </motion.button>
+          </div>
         </div>
 
         {/* right side — status + date + chevron */}
@@ -358,13 +384,18 @@ function MessageCard({ msg, expanded, index, onToggle, onAccept, onRead, onDelet
 
               {/* action row */}
               <div className="flex flex-wrap items-center gap-3 pt-1">
-                <motion.button
-                  whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
-                  onClick={onAccept} disabled={isAccepted}
-                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-400 to-emerald-500 text-white text-[1.3rem] font-bold rounded-xl shadow-sm shadow-emerald-200 hover:shadow-emerald-300 disabled:opacity-40 transition-all duration-200"
-                >
-                  <FaCheck /> Accept
-                </motion.button>
+
+                {/* Accept — bookings only */}
+                {isBooking && (
+                  <motion.button
+                    whileHover={{ scale: isAccepted ? 1 : 1.04 }}
+                    whileTap={{ scale: isAccepted ? 1 : 0.97 }}
+                    onClick={onAccept} disabled={isAccepted}
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-400 to-emerald-500 text-white text-[1.3rem] font-bold rounded-xl shadow-sm shadow-emerald-200 hover:shadow-emerald-300 disabled:opacity-50 transition-all duration-200"
+                  >
+                    <FaCheck /> {isAccepted ? "Accepted" : "Accept"}
+                  </motion.button>
+                )}
 
                 <motion.button
                   whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}
@@ -421,7 +452,7 @@ export default function AdminDashboard() {
   }
 
   async function handleAccept(id: string) { await updateMessageStatus(id, "accepted"); refresh() }
-  async function handleRead(id: string)   { await updateMessageStatus(id, "read");     refresh() }
+  async function handleRead(id: string)   { await updateMessageStatus(id, "read"); refresh() }
   async function handleDelete(id: string) {
     await deleteMessage(id); refresh()
     if (expandedId === id) setExpandedId(null)

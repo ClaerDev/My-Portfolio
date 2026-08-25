@@ -41,13 +41,7 @@ export const socialMedia = [
     id: 1,
     Icon: AiFillGithub,
     label: "GitHub",
-    mediaUrl: "https://github.com/",
-  },
-  {
-    id: 2,
-    Icon: AiFillLinkedin,
-    label: "LinkedIn",
-    mediaUrl: "https://www.linkedin.com/",
+    mediaUrl: "https://github.com/ClaerDev",
   },
   {
     id: 3,
