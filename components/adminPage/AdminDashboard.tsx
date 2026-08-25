@@ -6,10 +6,6 @@ import { loadMessages, updateMessageStatus, deleteMessage } from "../../lib/admi
 import { adminAuthVar } from "../../store"
 import { useReactiveVar } from "../../hooks/useReactiveVar"
 
-// ── credentials (stored in env — NEVER commit real passwords) ─────────────────
-const ADMIN_EMAIL    = process.env.NEXT_PUBLIC_ADMIN_EMAIL    ?? "tobeiokita35@gmail.com"
-const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD ?? "admin1234"
-
 type Tab = "all" | "unread" | "meetings"
 
 // ── helpers ────────────────────────────────────────────────────────────────────
@@ -31,16 +27,33 @@ function LoginScreen() {
   const [password, setPassword] = useState("")
   const [error, setError]       = useState("")
   const [shake, setShake]       = useState(false)
+  const [loading, setLoading]   = useState(false)
 
-  function handleLogin(e: React.FormEvent) {
+  async function handleLogin(e: React.FormEvent) {
     e.preventDefault()
-    if (email.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase() && password === ADMIN_PASSWORD) {
-      localStorage.setItem("portfolio_admin_auth", "true")
-      adminAuthVar.set(true)
-    } else {
-      setError("Invalid email or password.")
+    setLoading(true)
+    setError("")
+    try {
+      const res = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      })
+      const data = await res.json()
+      if (data.ok) {
+        localStorage.setItem("portfolio_admin_auth", "true")
+        adminAuthVar.set(true)
+      } else {
+        setError(data.message ?? "Invalid email or password.")
+        setShake(true)
+        setTimeout(() => setShake(false), 500)
+      }
+    } catch {
+      setError("Something went wrong. Please try again.")
       setShake(true)
       setTimeout(() => setShake(false), 500)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -92,9 +105,10 @@ function LoginScreen() {
 
           <button
             type="submit"
-            className="w-full py-4 bg-main-orange text-white text-2xl font-bold rounded-xl hover:opacity-90 transition-opacity"
+            disabled={loading}
+            className="w-full py-4 bg-main-orange text-white text-2xl font-bold rounded-xl hover:opacity-90 disabled:opacity-60 transition-opacity"
           >
-            Sign In
+            {loading ? "Signing in…" : "Sign In"}
           </button>
         </form>
       </div>
