@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 import { Redis } from "@upstash/redis"
 import { AdminMessage } from "../../../types"
+import { notifyClients } from "../../../lib/sseClients"
 
 const redis = new Redis({
   url:   process.env.UPSTASH_REDIS_REST_URL  ?? "",
@@ -33,6 +34,8 @@ export default async function handler(
       }
       const existing = (await redis.get<AdminMessage[]>(KEY)) ?? []
       await redis.set(KEY, JSON.stringify([newMsg, ...existing]))
+      // push to any open admin dashboard connections immediately
+      notifyClients("new_message", newMsg)
       return res.status(201).json({ ok: true, data: [newMsg] })
     }
 

@@ -287,7 +287,22 @@ export default function AdminDashboard() {
     const msgs = await loadMessages()
     setMessages(msgs)
   }, [])
-  useEffect(() => { if (isAdmin) refresh() }, [isAdmin, refresh])
+
+  // initial load + listen for server-pushed new_message events
+  useEffect(() => {
+    if (!isAdmin) return
+    refresh()
+
+    const es = new EventSource("/api/admin/stream")
+    es.addEventListener("new_message", () => refresh())
+
+    // reconnect automatically if the connection drops
+    es.onerror = () => {
+      es.close()
+    }
+
+    return () => es.close()
+  }, [isAdmin, refresh])
 
   function handleLogout() {
     localStorage.removeItem("portfolio_admin_auth")
