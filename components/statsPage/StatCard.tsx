@@ -31,7 +31,7 @@ export default function StatCard({ stat, border }: Props) {
 
   return (
     <li
-      className={`flex flex-col items-center py-8 px-6 text-center group hover:bg-gray-50 transition-colors duration-300 ${
+      className={`flex flex-col items-center py-4 px-3 text-center group hover:bg-gray-50 transition-colors duration-300 ${
         border ? "relative vCustomLine before:right-0" : ""
       }`}
     >

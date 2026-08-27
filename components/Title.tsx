@@ -11,7 +11,7 @@ export default function Title({ name, showTabs }: Props) {
   const currentTab = useReactiveVar(currentWorkVar)
 
   return (
-    <div className="customLine relative before:bottom-0 borderLeft z-20 py-10 flex flex-wrap gap-8 justify-center sm:justify-between items-center">
+    <div className="sticky top-0 bg-white customLine relative before:bottom-0 borderLeft z-30 py-10 flex flex-wrap gap-8 justify-center sm:justify-between items-center shadow-sm">
       <span className="ml-12 customCircle relative tracking-wide capitalize text-3xl text-gray-800 font-semibold">
         {name}
       </span>

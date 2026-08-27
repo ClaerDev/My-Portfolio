@@ -59,7 +59,9 @@ const Home: NextPage = () => {
           name="description"
           content="Senior AI & Full Stack Engineer — Takumi Shimizu"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#3b82f6" />
       </Head>
 
       {loaderPage && <LoaderPage />}

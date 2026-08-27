@@ -6,13 +6,24 @@ import { motion, AnimatePresence } from "framer-motion"
 import { currentWorkVar } from "../../store"
 import { useReactiveVar } from "../../hooks/useReactiveVar"
 
+// Shuffle function to randomize array order
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array]
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+  }
+  return shuffled
+}
+
 export default function Works() {
   const currentTab = useReactiveVar(currentWorkVar)
 
   const filteredWorks = useMemo(() => {
-    return worksData.filter((w) =>
+    const filtered = worksData.filter((w) =>
       w.workTabs.some((t) => t.tab === currentTab)
     )
+    return shuffleArray(filtered)
   }, [currentTab])
 
   return (

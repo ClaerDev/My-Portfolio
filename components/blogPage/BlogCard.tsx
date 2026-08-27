@@ -47,13 +47,9 @@ export default function BlogCard({ post }: Props) {
           <span>{post.date}</span>
         </div>
 
-        <h3 className="text-gray-800 text-[2rem] font-bold leading-tight mb-4 line-clamp-2 group-hover:text-main-orange transition-colors duration-300">
+        <h3 className="text-gray-800 text-[2rem] font-bold leading-tight mb-6 line-clamp-2 group-hover:text-main-orange transition-colors duration-300">
           {post.title}
         </h3>
-
-        <p className="text-gray-600 text-[1.6rem] leading-relaxed line-clamp-3 mb-6">
-          {post.excerpt}
-        </p>
 
         <div className="flex flex-wrap gap-2">
           {post.tags.slice(0, 3).map((tag) => (

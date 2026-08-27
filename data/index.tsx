@@ -294,7 +294,7 @@ export const worksData: WorkData[] = [
     liveUrl: "https://lumore.vercel.app/",
     githubUrl: "https://github.com/ClaerDev/E-commerce-project",
     images: [
-      { url: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=800&q=80" },
+      { url: "https://api.microlink.io/?url=https://lumore.vercel.app/&screenshot=true&meta=false&embed=screenshot.url" },
     ],
     technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
     workTabs: [{ tab: "All" }, { tab: "AI" }],
@@ -347,7 +347,7 @@ export const worksData: WorkData[] = [
     liveUrl: "http://site-weding.netlify.app",
     githubUrl: "https://github.com/ClaerDev/Wedding-site",
     images: [
-      { url: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80" },
+      { url: "https://api.microlink.io/?url=https://site-weding.netlify.app/&screenshot=true&meta=false&embed=screenshot.url" },
     ],
     technologies: ["React", "Node.js", "CSS", "JavaScript"],
     workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
@@ -360,7 +360,7 @@ export const worksData: WorkData[] = [
     liveUrl: "https://modern-commerce-site.netlify.app/",
     githubUrl: "https://github.com/ClaerDev/-Fully-responsive-and-modern-eCommerce-website",
     images: [
-      { url: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80" },
+      { url: "https://api.microlink.io/?url=https://modern-commerce-site.netlify.app/&screenshot=true&meta=false&embed=screenshot.url" },
     ],
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
     workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
@@ -404,9 +404,180 @@ export const worksData: WorkData[] = [
     technologies: ["Next.js 15", "React", "Stripe", "Drizzle ORM", "PostgreSQL"],
     workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
   },
+  {
+    id: "w12",
+    title: "Amazoning — Full-Stack E-Commerce",
+    description:
+      "Comprehensive full-stack e-commerce platform inspired by Amazon. Features include product catalog, shopping cart, user authentication, order management, and payment processing.",
+    liveUrl: "https://amazoning.onrender.com/",
+    githubUrl: "https://github.com/ClaerDev/e-commerce-full-stack-project",
+    images: [
+      { url: "https://api.microlink.io/?url=https://amazoning.onrender.com/&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+    workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
+  },
+
+  // ── Web Design Projects ────────────────────────────────────────────────────
+  {
+    id: "w13",
+    title: "Miss Helly — Hair Care Brand",
+    description:
+      "Elegant e-commerce website for a premium Japanese hair care brand. Graceful, flower-inspired UI with product listings, brand storytelling, and smooth animations.",
+    liveUrl: "https://misshelly.com/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io?url=https%3A%2F%2Fmisshelly.com%2F&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "EC-CUBE"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w14",
+    title: "Senya Gafu — Samurai Experience",
+    description:
+      "Immersive website for a traditional Japanese samurai and sword experience service. Rich storytelling, temple venue showcases, and cultural activity booking.",
+    liveUrl: "https://senya-gafu.com/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io?url=https%3A%2F%2Fsenya-gafu.com%2F&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["WordPress", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w14",
+    title: "Tsubaki Music School — Online Lessons",
+    description:
+      "Large-scale music school website covering all 23 Tokyo wards. Instrument search, lesson booking system, and instructor profiles across hundreds of locations.",
+    liveUrl: "https://tsubaki-musicschool.com/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io?url=https%3A%2F%2Ftsubaki-musicschool.com%2F&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["WordPress", "PHP", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w15",
+    title: "Dress Atelier — Wedding Dress Shop",
+    description:
+      "Sophisticated bridal boutique website for a Sapporo wedding dress shop. Gallery, rental plans, ceremony packages, and photo plan pages with a luxurious aesthetic.",
+    liveUrl: "https://dress-atelier.jp/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io?url=https%3A%2F%2Fdress-atelier.jp%2F&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["WordPress", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w16",
+    title: "Flower Web Shop — Fashion EC",
+    description:
+      "Official online store for the Flower fashion brand. Seasonal lookbooks, layered-style collections, and a seamless shopping experience for women's apparel.",
+    liveUrl: "https://flower-webshop.jp/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io?url=https%3A%2F%2Fflower-webshop.jp%2F&screenshot=true&meta=false&embed=screenshot.url&scroll=footer" },
+    ],
+    technologies: ["Shopify", "Liquid", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w17",
+    title: "Ririmew — Japanese Cosmetics",
+    description:
+      "Official website for Ririmew, a popular Japanese cosmetics brand. Product launches, makeup tutorials, colour lookbooks, and a full e-commerce catalogue.",
+    liveUrl: "https://www.ririmew.com/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io/?url=https://www.ririmew.com/&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["Shopify", "Liquid", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w18",
+    title: "Gelato Pique — Lifestyle Brand",
+    description:
+      "Premium lifestyle and loungewear brand website. Clean, minimal design with seasonal collections, lookbooks, and an integrated online shop experience.",
+    liveUrl: "https://gelatopique.com/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io?url=https%3A%2F%2Fgelatopique.com%2F&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["Shopify", "Liquid", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w19",
+    title: "Studio Tremo — Creative Studio",
+    description:
+      "Portfolio and services website for a creative studio. Minimal, editorial design showcasing photography, branding, and video production work.",
+    liveUrl: "https://studio-tremo.com/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io?url=https%3A%2F%2Fstudio-tremo.com%2F&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "GSAP"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w20",
+    title: "HK Wedding — Bridal Studio",
+    description:
+      "Elegant wedding studio website offering photo, dress, and ceremony planning services. Soft, romantic aesthetic with gallery showcases and booking flow.",
+    liveUrl: "https://www.hk-wedding.jp/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io/?url=https://www.hk-wedding.jp/&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["WordPress", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w21",
+    title: "Ogiya Wedding — Wedding Hall",
+    description:
+      "Wedding hall and banquet venue website with ceremony plan showcases, venue galleries, and a comprehensive reservation and consultation system.",
+    liveUrl: "https://ogiya-wedding.jp/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io/?url=https://ogiya-wedding.jp/&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["WordPress", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w22",
+    title: "Ecru's Pose — Bridal Photography",
+    description:
+      "Bridal photo studio website with a soft, sophisticated design. Features photo plan options, couple galleries, and an online appointment booking system.",
+    liveUrl: "https://www.ecruspose.jp/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io/?url=https://www.ecruspose.jp/&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["WordPress", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
+  {
+    id: "w23",
+    title: "Kuraudia Holdings — Bridal Group",
+    description:
+      "Corporate website for a major Japanese bridal industry holding company. Clean corporate design presenting group brands, IR information, and company overview.",
+    liveUrl: "https://www.kuraudia.holdings/",
+    githubUrl: "",
+    images: [
+      { url: "https://api.microlink.io?url=https%3A%2F%2Fwww.kuraudia.holdings%2F&screenshot=true&meta=false&embed=screenshot.url" },
+    ],
+    technologies: ["HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+  },
 ]
 
-export const workTabs = ["All", "AI", "Full-Stack"]
+export const workTabs = ["All", "AI", "Full-Stack", "Web Design"]
 
 export const prices = [
   {
@@ -437,7 +608,7 @@ export const prices = [
 
 // ─── Blog Data ───────────────────────────────────────────────────────────────
 
-export const blogTabs = ["All", "AI", "Full-Stack"]
+export const blogTabs = ["All", "AI", "Full-Stack", "Web Design"]
 
 export const blogPosts: BlogPost[] = [
   {
@@ -571,6 +742,150 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     coverImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
     tags: ["Next.js 15", "Stripe", "Drizzle ORM", "PostgreSQL"],
+  },
+  {
+    id: "b12",
+    title: "Amazoning: Building a Full-Stack E-Commerce Platform",
+    excerpt:
+      "Deep dive into building Amazoning — a comprehensive Amazon-inspired e-commerce platform with React, Node.js, Express, MongoDB, user authentication, shopping cart, and Stripe payment integration.",
+    content: `Building a full-featured e-commerce platform from scratch teaches you the complexity behind modern online retail. Amazoning covers the complete user journey from browsing to checkout.\n\n**Architecture Overview**\nFull MERN stack: React frontend with React Router for navigation, Express.js REST API, MongoDB for data persistence, and JWT-based authentication. The frontend and backend are deployed separately — React on Netlify, Express on Render.\n\n**User Authentication & Authorization**\nJWT tokens stored in httpOnly cookies for security. Role-based access control distinguishes between customers and admin users. Password hashing with bcrypt before storage. Protected routes on both frontend and backend.\n\n**Shopping Cart & State Management**\nCart state managed with React Context API. Cart persists to localStorage so users don't lose items on page refresh. Real-time price calculations including tax and shipping. Guest checkout supported with email confirmation.\n\n**Product Catalog & Search**\nMongoDB for flexible product schema with categories, variants, and inventory tracking. Text search with MongoDB indexes. Image uploads handled via Cloudinary for optimized delivery and transformations.\n\n**Payment Processing**\nStripe Checkout integration for secure payment handling. Webhook listeners for order confirmation. Automatic email receipts sent via SendGrid. Order history accessible in user dashboard.\n\n**Admin Dashboard**\nFull CRUD operations for products, orders, and users. Sales analytics with chart visualizations. Inventory management with low-stock alerts. Order fulfillment workflow with status tracking.`,
+    category: "Full-Stack",
+    date: "Aug 2024",
+    readTime: "9 min read",
+    coverImage: "https://api.microlink.io/?url=https://amazoning.onrender.com/&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+  },
+  {
+    id: "b13",
+    title: "Miss Helly: Building a Premium Hair Care Brand Website",
+    excerpt: "How I designed and built the Miss Helly hair care e-commerce site — balancing graceful brand aesthetics with a smooth product browsing and purchase experience.",
+    content: `Miss Helly required a site that felt as refined as the products themselves. The brief was clear: floral, elegant, and feminine without being fragile.\n\n**Brand-First Design**\nEvery layout decision started with the brand language. Soft cream backgrounds, serif-influenced typography, and generous whitespace let the product photography breathe.\n\n**Product Architecture**\nThe catalogue is structured around hair concern categories — moisture, shine, damage repair — so customers find solutions rather than browsing blind. Each product page includes ingredient highlights and usage guides.\n\n**Performance**\nAll hero images are served in WebP with JPEG fallback. Lazy loading is applied to below-fold product grids. The result is a sub-2s LCP on mobile despite the rich imagery.`,
+    category: "Web Design",
+    date: "Aug 2025",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io?url=https%3A%2F%2Fmisshelly.com%2F&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "E-Commerce", "CSS", "JavaScript"],
+  },
+  {
+    id: "b13",
+    title: "Senya Gafu: Designing an Immersive Japanese Cultural Experience Site",
+    excerpt: "Building the website for a samurai and traditional arts experience brand — merging historical aesthetics with modern web storytelling and booking flows.",
+    content: `Senya Gafu offers sword, Zen, and tea ceremony experiences at temples and dojos across Japan. The website needed to transport visitors into that world before they ever booked.\n\n**Storytelling Layout**\nEach experience page opens with full-bleed photography, followed by descriptive copy written in both poetic Japanese and clear English. The scroll journey mirrors the experience itself — unhurried, deliberate.\n\n**Venue Showcases**\nThree distinct venue types (temple, urban dojo, rural farmhouse) each have dedicated pages with atmosphere photography, access maps, and available experience menus.\n\n**Booking Integration**\nA reservation form connects to an external booking system. Date availability is fetched via API so guests see real-time slot availability without leaving the page.`,
+    category: "Web Design",
+    date: "Jul 2025",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io?url=https%3A%2F%2Fsenya-gafu.com%2F&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "WordPress", "JavaScript", "UX"],
+  },
+  {
+    id: "b15",
+    title: "Tsubaki Music School: Scaling a Lesson Booking Site Across Tokyo",
+    excerpt: "How I built a music school website covering all 23 Tokyo wards — with searchable lesson listings, instructor profiles, and a high-performance location-based browsing system.",
+    content: `Tsubaki Music School operates across hundreds of locations in Tokyo. The challenge: make a vast catalogue feel navigable and personal.\n\n**Location Search Architecture**\nA custom location search lets students filter by nearest station, instrument, and lesson style. The query system handles hundreds of combinations without perceptible latency.\n\n**Instrument Pages**\nEach instrument has a dedicated landing page with FAQs, lesson format descriptions, and sample lesson videos — optimised for both SEO and conversion.\n\n**Mobile Experience**\nOver 70% of traffic comes from mobile. The entire site is designed mobile-first, with tap-friendly filters and a streamlined booking flow that takes under 60 seconds to complete.`,
+    category: "Web Design",
+    date: "Jun 2025",
+    readTime: "6 min read",
+    coverImage: "https://api.microlink.io?url=https%3A%2F%2Ftsubaki-musicschool.com%2F&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "WordPress", "PHP", "SEO"],
+  },
+  {
+    id: "b16",
+    title: "Dress Atelier: A Bridal Boutique Website with a Luxurious Feel",
+    excerpt: "Designing and building the Dress Atelier website — a Sapporo wedding dress shop requiring an imported European dress gallery, rental plans, and an editorial aesthetic.",
+    content: `Dress Atelier specialises in imported European wedding dresses. The website needed to communicate exclusivity and warmth simultaneously.\n\n**Gallery Architecture**\nThe dress gallery uses a masonry grid with hover overlays showing dress name and collection. Filtering by silhouette, neckline, and colour lets brides narrow choices intuitively.\n\n**Plan Pages**\nThree clear service tiers — Rental, Ceremony, Photo — each have dedicated landing pages with pricing, inclusions, and gallery. CTAs lead to a single unified inquiry form.\n\n**Trust Signals**\nBlog posts documenting real shoot locations (snow, overseas, studio) act as social proof and fuel organic search traffic for location-specific queries.`,
+    category: "Web Design",
+    date: "May 2025",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io?url=https%3A%2F%2Fdress-atelier.jp%2F&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "WordPress", "CSS", "Bridal"],
+  },
+  {
+    id: "b17",
+    title: "Flower Web Shop: Building a Fashion EC Site on Shopify",
+    excerpt: "How I built the official Flower brand online store — seasonal collections, layered-style lookbooks, and a Shopify storefront optimised for conversion and brand consistency.",
+    content: `Flower is a women's fashion brand with a strong seasonal identity. The web shop needed to match that identity while driving sales.\n\n**Shopify Theme Architecture**\nI built a custom Liquid theme from scratch rather than adapting an existing one. This gave full control over component structure, load order, and brand-specific interactions.\n\n**Lookbook Integration**\nSeasonal lookbook pages are built as editorial spreads. Each look links directly to the product page for every item worn — a key conversion driver.\n\n**Cart and Checkout UX**\nA slide-out cart with real-time stock indicators and a streamlined checkout reduced drop-off. Upsell suggestions in the cart are based on the current season's curated pairings.`,
+    category: "Web Design",
+    date: "Apr 2025",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io?url=https%3A%2F%2Fflower-webshop.jp%2F&screenshot=true&meta=false&embed=screenshot.url&scroll=footer",
+    tags: ["Web Design", "Shopify", "Liquid", "E-Commerce"],
+  },
+  {
+    id: "b18",
+    title: "Ririmew: Launching a Japanese Cosmetics Brand Online",
+    excerpt: "Building the Ririmew official site — a Japanese cosmetics brand requiring product launches, makeup coordination lookbooks, and a Shopify storefront with strong visual identity.",
+    content: `Ririmew targets young Japanese women seeking expressive, affordable cosmetics. The site had to feel current and trend-led while being easy to shop.\n\n**Product Launch Pages**\nNew releases get dedicated launch pages with full-width hero imagery, colour variant previews, and a how-to-use section. These pages are built reusably so the marketing team can spin up a new one in minutes.\n\n**Coordination Content**\nA makeup coordination section shows complete looks using multiple Ririmew products. Each look lists every product used with direct add-to-cart links — measurably increasing basket size.\n\n**Performance on Shopify**\nBy deferring non-critical scripts and using Shopify's native image optimisation pipeline, the storefront achieves a 90+ Lighthouse performance score despite heavy imagery.`,
+    category: "Web Design",
+    date: "Mar 2025",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io/?url=https://www.ririmew.com/&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "Shopify", "Liquid", "Cosmetics"],
+  },
+  {
+    id: "b19",
+    title: "Gelato Pique: Minimal Lifestyle Branding on the Web",
+    excerpt: "How I designed the Gelato Pique website — a premium loungewear brand requiring minimal aesthetics, seasonal lookbooks, and a seamless integrated shopping experience.",
+    content: `Gelato Pique is known for soft, pastel loungewear. The website had to feel as gentle and considered as the products.\n\n**Minimal Design System**\nA tight design system — two typefaces, a muted pastel palette, 8px grid — ensures every page feels cohesive. No component deviates from the system without reason.\n\n**Seasonal Campaign Pages**\nCampaign pages are rebuilt each season. I created a template system in Liquid so the in-house team can update seasonal content without touching code.\n\n**International Considerations**\nThe site serves both domestic and international customers. Locale detection switches language and currency automatically, and the checkout adapts to the selected region.`,
+    category: "Web Design",
+    date: "Feb 2025",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io?url=https%3A%2F%2Fgelatopique.com%2F&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "Shopify", "Liquid", "Fashion"],
+  },
+  {
+    id: "b20",
+    title: "Studio Tremo: Building an Editorial Creative Studio Portfolio",
+    excerpt: "Designing Studio Tremo's portfolio site — a creative studio requiring a minimal, editorial look with GSAP animations, photography showcases, and a services presentation.",
+    content: `Studio Tremo handles photography, branding, and video production. The website is both their portfolio and their primary business development tool.\n\n**Editorial Layout**\nTaking inspiration from print editorial design, each project page is a unique layout. No two case studies look alike — this itself communicates the studio's creative range.\n\n**GSAP Animation**\nSubtle scroll-triggered animations — image reveals, text staggering, cursor follower — add polish without distracting from the work. All animations are disabled via prefers-reduced-motion.\n\n**Performance**\nLazy video loading and adaptive image sizing keep the site fast even on mobile, despite hosting extensive photography and video content.`,
+    category: "Web Design",
+    date: "Jan 2025",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io?url=https%3A%2F%2Fstudio-tremo.com%2F&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "GSAP", "JavaScript", "CSS"],
+  },
+  {
+    id: "b21",
+    title: "HK Wedding: Romantic Bridal Studio Website Design",
+    excerpt: "Building the HK Wedding studio site — soft romantic design, ceremony and photo plan showcases, gallery, and a streamlined consultation booking flow.",
+    content: `HK Wedding offers wedding photography and planning services. The brief was simple: romantic, trustworthy, and easy to book.\n\n**Visual Language**\nSoft ivory backgrounds, elegant serif headings, and full-bleed couple photography set the emotional tone immediately. Every colour and spacing decision reinforces the feeling of a special occasion.\n\n**Gallery Architecture**\nA filterable gallery lets prospective clients browse by venue type, season, and style. This reduces pre-inquiry friction and helps clients arrive at consultations with a clear visual brief.\n\n**Booking Flow**\nA two-step inquiry form — style preferences first, then contact details — reduced abandonment compared to the previous single long form.`,
+    category: "Web Design",
+    date: "Dec 2024",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io/?url=https://www.hk-wedding.jp/&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "WordPress", "CSS", "Bridal"],
+  },
+  {
+    id: "b22",
+    title: "Ogiya Wedding: Venue Website for a Full-Service Wedding Hall",
+    excerpt: "Designing the Ogiya Wedding website — a full-service wedding hall requiring ceremony plan showcases, banquet galleries, and an online reservation system.",
+    content: `Ogiya Wedding is a traditional Japanese wedding hall offering end-to-end ceremony and reception services. The website serves both as a brochure and a lead generation tool.\n\n**Plan Showcase Pages**\nEach ceremony style (Japanese, Western, garden) has a dedicated page with venue photos, included services breakdown, and guest capacity information. Clear pricing CTAs are present on every page.\n\n**Gallery and Virtual Tour**\nA filterable photo gallery and embedded virtual room tours let couples explore the venue remotely. This proved especially valuable for out-of-town clients.\n\n**Reservation System**\nAn online consultation reservation widget connects to the venue's CRM. Available slots are shown in real-time and confirmation emails are sent automatically.`,
+    category: "Web Design",
+    date: "Nov 2024",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io/?url=https://ogiya-wedding.jp/&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "WordPress", "PHP", "Bridal"],
+  },
+  {
+    id: "b23",
+    title: "Ecru's Pose: Bridal Photo Studio Website with Appointment Booking",
+    excerpt: "Building the Ecru's Pose bridal photography studio site — a soft, sophisticated design with photo plan options, couple galleries, and an online appointment system.",
+    content: `Ecru's Pose specialises in bridal and pre-wedding photography. The website needed to convert curious visitors into booked consultations.\n\n**Photo Plan Pages**\nFive distinct photo plans are presented with clear inclusions, pricing tiers, and sample albums. Comparison tables help couples choose the right package without needing to call.\n\n**Portfolio Gallery**\nA filterable portfolio organised by season, location, and style lets couples find examples that resonate with their vision. Each gallery item links to a full behind-the-scenes feature post.\n\n**Appointment System**\nA calendar-based booking widget shows available consultation slots. After booking, automated email sequences send reminders, preparation guides, and style questionnaires.`,
+    category: "Web Design",
+    date: "Oct 2024",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io/?url=https://www.ecruspose.jp/&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "WordPress", "JavaScript", "Bridal"],
+  },
+  {
+    id: "b24",
+    title: "Kuraudia Holdings: Corporate Website for a Major Bridal Group",
+    excerpt: "Designing the Kuraudia Holdings corporate site — clean, authoritative design presenting group brands, investor relations, news, and company philosophy.",
+    content: `Kuraudia Holdings is a holding company overseeing multiple bridal industry brands. The website serves investors, media, and prospective partners.\n\n**Corporate Design Language**\nA clean, authoritative design system uses a muted palette, precise grid alignment, and conservative typography to communicate stability and scale.\n\n**Group Brand Architecture**\nEach subsidiary brand has a dedicated section linking to its own site, with a clear visual hierarchy that distinguishes the holding company from operating brands.\n\n**IR and News**\nInvestor relations pages present financial highlights, press releases, and governance information in a structured, scannable format. News is filtered by category (corporate, bridal, ESG).`,
+    category: "Web Design",
+    date: "Sep 2024",
+    readTime: "5 min read",
+    coverImage: "https://api.microlink.io?url=https%3A%2F%2Fwww.kuraudia.holdings%2F&screenshot=true&meta=false&embed=screenshot.url",
+    tags: ["Web Design", "HTML", "CSS", "Corporate"],
   },
 ]
 

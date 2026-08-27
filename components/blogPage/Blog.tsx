@@ -37,7 +37,7 @@ export default function Blog() {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={titleVariants}
-        className="customLine relative before:bottom-0 borderLeft z-20 py-10 flex flex-wrap gap-8 justify-center sm:justify-between items-center"
+        className="sticky top-0 bg-white customLine relative before:bottom-0 borderLeft z-30 py-10 flex flex-wrap gap-8 justify-center sm:justify-between items-center shadow-sm"
       >
         <span className="ml-12 customCircle relative tracking-wide capitalize text-3xl text-gray-800 font-semibold">
           blog
